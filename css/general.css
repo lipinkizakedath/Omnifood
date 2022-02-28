@@ -1,6 +1,7 @@
 html {
 	font-size: 62.5%;
 	background-color: #fff;
+	scroll-behavior: smooth;
 }
 
 * {
@@ -54,17 +55,34 @@ body {
 	letter-spacing: 0.7px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
 	display: inline-block;
-	background-color: #e67e22;
+	/* background-color: #e67e22; */
 	font-size: 2rem;
 	padding: 1.6rem 3.2rem;
 	border-radius: 0.9rem;
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s;
+
+	border: none;
+	cursor: pointer;
 }
+
+.btn-form {
+	background-color: #45260a;
+	color: #fdf2e9;
+	align-self: end;
+	padding: 1.2rem;
+}
+
+.btn-form:hover {
+	background-color: #fff;
+	color: #555;
+}
+
 .btn--full:link,
 .btn--full:visited {
 	background-color: #e67e22;
@@ -95,6 +113,7 @@ body {
 
 .container {
 	max-width: 120rem;
+	padding: 3.2rem;
 	margin: 0 auto;
 }
 
@@ -122,6 +141,10 @@ body {
 
 .grid-4-cols {
 	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5-cols {
+	grid-template-columns: repeat(5, 1fr);
 }
 
 .grid-center-v {
@@ -174,4 +197,11 @@ strong {
 .link:active {
 	color: #b8651b;
 	border-bottom: 1px solid transparent;
+}
+
+*:focus {
+	outline: none;
+	/* outline: 4px dotted #e67e22; */
+	/* outline-offset: 8px; */
+	box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
